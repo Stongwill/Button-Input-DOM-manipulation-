@@ -1,0 +1,32 @@
+input.hide{
+    visibility: hidden;
+}
+input:disabled{
+    opacity: 0.3;
+}
+.test__body{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+input{
+    border-radius: 20px;
+    padding: 3px 15px;
+    border: 1px solid rebeccapurple;
+}
+
+button {
+    padding: 3px 10px;
+    background-color: bisque;
+    border-radius: 20px;
+    border: none;
+}
+
+.new-block{
+    display: block;
+    width: 100%;
+    padding: 3px 15px;
+    background-color: aqua;
+}
