@@ -13,8 +13,22 @@ const inputNum = document.querySelector('.test__numbers input');
 document.addEventListener('DOMContentLoaded', () => {
     btnLog.addEventListener('click', () => input.value !=='' && console.log(input.value));
     btnClear.addEventListener('click', () => input.value = '');
-    btnBlock.addEventListener('click', () => input.disabled =  input.disabled === false ? true : false)
-    btnHide.addEventListener('click', () => input.classList.toggle('hide'));
+    btnBlock.addEventListener('click', () => {
+        if(input.disabled === true){
+            btnBlock.textContent = "Block input";
+        } else {
+            btnBlock.textContent = "Unblock input";
+        }
+        input.disabled =  input.disabled === false ? true : false;
+    })
+    btnHide.addEventListener('click', () => {
+        if(!input.classList.contains('hide')){
+            btnHide.textContent = "Show input";
+        } else{
+            btnHide.textContent = "Hide input";
+        }
+        input.classList.toggle('hide')
+    });
     btnColor.addEventListener('click', () => {
         const colors = ['black', 'red', 'green', 'blue'];
         const randomNum = Math.floor(Math.random() * 4);
@@ -45,4 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         inputNum.value = ''
     })
-})
+});
